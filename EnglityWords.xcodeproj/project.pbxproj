@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F12D59372B875A63003897AF /* .gitignore.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12D59362B875A63003897AF /* .gitignore.xib */; };
 		F13261B12B79E6AD00971FDC /* EnglityWordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13261B02B79E6AD00971FDC /* EnglityWordsApp.swift */; };
 		F13261B32B79E6AD00971FDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13261B22B79E6AD00971FDC /* ContentView.swift */; };
 		F13261B52B79E6AE00971FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13261B42B79E6AE00971FDC /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F12D59362B875A63003897AF /* .gitignore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = .gitignore.xib; sourceTree = "<group>"; };
 		F13261AD2B79E6AD00971FDC /* EnglityWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglityWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F13261B02B79E6AD00971FDC /* EnglityWordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglityWordsApp.swift; sourceTree = "<group>"; };
 		F13261B22B79E6AD00971FDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 		F13261A42B79E6AD00971FDC = {
 			isa = PBXGroup;
 			children = (
+				F12D59362B875A63003897AF /* .gitignore.xib */,
 				F13261AF2B79E6AD00971FDC /* EnglityWords */,
 				F13261AE2B79E6AD00971FDC /* Products */,
 			);
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12D59372B875A63003897AF /* .gitignore.xib in Resources */,
 				F13261B82B79E6AE00971FDC /* Preview Assets.xcassets in Resources */,
 				F13261B52B79E6AE00971FDC /* Assets.xcassets in Resources */,
 			);
