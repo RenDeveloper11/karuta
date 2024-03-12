@@ -25,22 +25,82 @@ class WordsViewModel: ObservableObject {
         WordsList(wordNo: 13, english: "ever", japanese: "これまでに", tags: ["副詞"]),
         WordsList(wordNo: 14, english: "always", japanese: "いつも", tags: ["副詞"]),
         WordsList(wordNo: 15, english: "actually", japanese: "実際は", tags: ["副詞"]),
-    ]
+    ] {
+        didSet {
+            saveWordsListToUserDefaults()
+        }
+    }
+    @Published var profile: [Profile] = [
+        Profile(username: "")
+    ] {
+        didSet {
+            saveProfileToUserDefaults()
+        }
+    }
     @Published var shuffledWordsList: [WordsList] = []
-    @Published var shuffle3Word: [WordsList] = []
-    @Published var eng3Word: [WordsList] = []
-    @Published var jp3Word: [WordsList] = []
+    @Published var shuffle7Word: [WordsList] = []
+    @Published var eng7Word: [WordsList] = []
+    @Published var jp7Word: [WordsList] = []
     
     func startShuffle() {
-        shuffledWordsList = wordsList.shuffled()
-        shuffle3Word = Array(shuffledWordsList.prefix(7))
-        eng3Word = shuffle3Word.shuffled()
-        jp3Word = shuffle3Word.shuffled()
+        shuffledWordsList = wordsList.shuffled() // wordsListをシャッフルする
+        shuffle7Word = Array(shuffledWordsList.prefix(7)) // シャッフルされたwordsListから7つ取り出す
+        eng7Word = shuffle7Word.shuffled() // 英語列用にさらにシャッフル
+        jp7Word = shuffle7Word.shuffled() // 日本語列用にさらにシャッフル
         shuffledWordsList.removeFirst(7)
     }
     
     func timeFormat(time: Double) -> String {
         return String(format: "%.1f", time)
+    }
+    
+    // ↓wordsListが変更されるたびにUserDefaultsに保存する処理↓
+    private let userDefaultsKey = "yourUserDefaultsKey"
+    
+    init() {
+        loadWordsListFromUserDefaults()
+        loadProfileFromUserDefaults()
+    }
+    
+    private func saveWordsListToUserDefaults() {
+        do {
+            let data = try JSONEncoder().encode(wordsList)
+            UserDefaults.standard.set(data, forKey: userDefaultsKey)
+        } catch {
+            print("Failed to encode and save wordsList: \(error)")
+        }
+    }
+    
+    private func loadWordsListFromUserDefaults() {
+        if let data = UserDefaults.standard.data(forKey: userDefaultsKey) {
+            do {
+                wordsList = try JSONDecoder().decode([WordsList].self, from: data)
+            } catch {
+                print("Failed to decode wordsList from UserDefaults: \(error)")
+            }
+        }
+    }
+    
+    // ↓profileが変更されるたびにUserDefaultsに保存する処理↓
+    private let profileUserDefaultsKey = "profileUserDefaultsKey"
+    
+    private func saveProfileToUserDefaults() {
+        do {
+            let data = try JSONEncoder().encode(profile)
+            UserDefaults.standard.set(data, forKey: profileUserDefaultsKey)
+        } catch {
+            print("Failed to encode and save profile: \(error)")
+        }
+    }
+    
+    private func loadProfileFromUserDefaults() {
+        if let data = UserDefaults.standard.data(forKey: profileUserDefaultsKey) {
+            do {
+                profile = try JSONDecoder().decode([Profile].self, from: data)
+            } catch {
+                print("Failed to decode profile from UserDefaults: \(error)")
+            }
+        }
     }
     
 }

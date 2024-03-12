@@ -15,6 +15,9 @@
 		F13261C12B817E0400971FDC /* WordsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13261C02B817E0400971FDC /* WordsList.swift */; };
 		F13261C32B817F5300971FDC /* WordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13261C22B817F5300971FDC /* WordsViewModel.swift */; };
 		F13261C52B81861000971FDC /* Karuta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13261C42B81861000971FDC /* Karuta.swift */; };
+		F1F2E4B82B9EE6E3008C3285 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2E4B72B9EE6E3008C3285 /* ProfileView.swift */; };
+		F1F2E4BA2B9F2DF5008C3285 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2E4B92B9F2DF5008C3285 /* EditProfile.swift */; };
+		F1F2E4BE2B9F3754008C3285 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2E4BD2B9F3754008C3285 /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		F13261C02B817E0400971FDC /* WordsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsList.swift; sourceTree = "<group>"; };
 		F13261C22B817F5300971FDC /* WordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewModel.swift; sourceTree = "<group>"; };
 		F13261C42B81861000971FDC /* Karuta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Karuta.swift; sourceTree = "<group>"; };
+		F1F2E4B72B9EE6E3008C3285 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F1F2E4B92B9F2DF5008C3285 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+		F1F2E4BD2B9F3754008C3285 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,9 @@
 				F13261C22B817F5300971FDC /* WordsViewModel.swift */,
 				F13261C42B81861000971FDC /* Karuta.swift */,
 				F13261B22B79E6AD00971FDC /* ContentView.swift */,
+				F1F2E4B72B9EE6E3008C3285 /* ProfileView.swift */,
+				F1F2E4B92B9F2DF5008C3285 /* EditProfile.swift */,
+				F1F2E4BD2B9F3754008C3285 /* TabBarView.swift */,
 				F13261B42B79E6AE00971FDC /* Assets.xcassets */,
 				F13261B62B79E6AE00971FDC /* Preview Content */,
 			);
@@ -152,8 +161,11 @@
 			files = (
 				F13261B32B79E6AD00971FDC /* ContentView.swift in Sources */,
 				F13261C12B817E0400971FDC /* WordsList.swift in Sources */,
+				F1F2E4BE2B9F3754008C3285 /* TabBarView.swift in Sources */,
 				F13261C52B81861000971FDC /* Karuta.swift in Sources */,
 				F13261C32B817F5300971FDC /* WordsViewModel.swift in Sources */,
+				F1F2E4B82B9EE6E3008C3285 /* ProfileView.swift in Sources */,
+				F1F2E4BA2B9F2DF5008C3285 /* EditProfile.swift in Sources */,
 				F13261B12B79E6AD00971FDC /* EnglityWordsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
